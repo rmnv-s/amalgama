@@ -1,25 +1,37 @@
+const root = document.querySelector(".root");
 const burgerMenuButton = document.querySelector(".burger-menu");
 const menu = document.querySelector(".menu");
 const menuList = document.querySelector(".menu__list");
 const contactInfo = document.querySelector(".contact-info");
+const menuLinks = document.querySelectorAll(".menu__list-link");
 //
 burgerMenuButton.addEventListener("click", () => {
   menuList.classList.toggle("open");
-
+  root.classList.toggle("no-scroll");
+  burgerMenuButton.classList.toggle("active");
   if (window.innerWidth <= 768) {
     contactInfo.classList.toggle("open-contact");
   } else {
   }
 });
 
-//
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuList.classList.remove("open");
+    root.classList.remove("no-scroll");
+    contactInfo.classList.remove("open-contact");
+    burgerMenuButton.classList.remove("active");
+  });
+});
+
+// Анимация картинки на главном экране
 const app = new PIXI.Application({
   width: window.innerWidth,
   height: window.innerHeight,
   backgroundColor: 0xffffff,
   // resizeTo: window,
 });
-// document.body.appendChild(app.view);
+
 document.querySelector(".hero__pixi-container").appendChild(app.view);
 
 // Загрузка текстур
