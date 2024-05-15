@@ -1,5 +1,3 @@
-console.log("helloertwerter");
-
 const burgerMenuButton = document.querySelector(".burger-menu");
 const menu = document.querySelector(".menu");
 const menuList = document.querySelector(".menu__list");
@@ -14,19 +12,10 @@ burgerMenuButton.addEventListener("click", () => {
   }
 });
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   const marqueeContainer = document.querySelector(".marquee");
-//   const marqueeText = document.querySelector(".marquee__text");
-//   const cloneText = marqueeText.cloneNode(true);
-//
-//   marqueeContainer.appendChild(cloneText);
-// });
-
 //
 const app = new PIXI.Application({
   width: window.innerWidth,
   height: window.innerHeight,
-  // backgroundColor: transparent,
   backgroundColor: 0xffffff,
   // resizeTo: window,
 });
@@ -86,5 +75,3 @@ imgTexture.baseTexture.on("loaded", () => {
     });
   });
 });
-
-console.log("works");
