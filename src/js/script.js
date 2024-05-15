@@ -1,3 +1,32 @@
+document.addEventListener("DOMContentLoaded", function () {
+  ymaps.ready(init);
+
+  function init() {
+    // Создание карты.
+    let myMap = new ymaps.Map("map", {
+      center: [55.725899, 37.524776],
+      zoom: 15,
+      controls: [],
+      suppressMapOpenBlock: true,
+    });
+    myMap.container.getElement().style.filter = "grayscale(100%)";
+
+    // Добавление метки на карту.
+    let myPlacemark = new ymaps.Placemark(
+      [55.727339, 37.532286],
+      {},
+      {
+        // Настройки иконки метки
+        iconLayout: "default#image",
+        iconImageHref: "../img/map-location.svg",
+      }
+    );
+
+    myMap.geoObjects.add(myPlacemark);
+  }
+});
+
+//
 const root = document.querySelector(".root");
 const burgerMenuButton = document.querySelector(".burger-menu");
 const menu = document.querySelector(".menu");
