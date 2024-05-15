@@ -1,0 +1,101 @@
+.form-section {
+  background: linear-gradient(278deg, #4a7ea0 -13.39%, #1b2e3a 147.05%);
+  // background-color: tomato;
+  // padding: 120px 0;
+  color: #fff;
+  padding: 120px 0;
+
+  &__inner {
+  }
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #fff;
+  padding: 10px;
+}
+
+fieldset {
+  border: none;
+}
+
+input::placeholder {
+  color: #ffffff; /* Цвет текста placeholder */
+  font-size: calc(14px + 2 * (100vw - 320px) / 1580);
+}
+//
+
+.input-question {
+  width: 100%;
+}
+
+.file-input {
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.file-label {
+  position: relative;
+  font-size: calc(14px + 2 * (100vw - 320px) / 1580);
+  display: block;
+  // border-bottom: 1px solid red;
+}
+
+.file-label::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: red;
+}
+
+//
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-checkbox {
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px; /* Добавляем небольшой отступ слева для визуального отделения текста от квадрата */
+}
+
+.custom-checkbox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px; /* Размер квадрата */
+  height: 24px; /* Размер квадрата */
+  border: 2px solid #ffffff; /* Цвет рамки */
+  border-radius: 50%; /* Делаем квадрат круглым */
+}
+
+.custom-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 5px; /* Выравниваем круг по центру вертикально */
+  left: 5px; /* Выравниваем круг по центру горизонтально */
+  width: 14px; /* Диаметр круга */
+  height: 14px; /* Диаметр круга */
+  border-radius: 50%; /* Делаем круг */
+  background-color: transparent; /* Заливаем круг прозрачным по умолчанию */
+}
+
+/* При нажатии на чекбокс делаем круг видимым и заливаем его */
+input[type="checkbox"]:checked + .custom-checkbox::after {
+  background-color: #ffffff; /* Цвет заливки круга */
+}
+
+.custom-checkbox span {
+  position: relative;
+  top: 10px; /* Расстояние от кастомного чекбокса до текста */
+  outline: 1px solid blue;
+  left: 10px;
+}

@@ -1,0 +1,58 @@
+.install {
+  margin-bottom: calc(100px + 70 * (100vw - 320px) / 1580);
+  &__inner {
+    margin-bottom: 80px;
+  }
+
+  &__description {
+    margin-left: 15%;
+    position: relative;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+      left: 0;
+    }
+  }
+
+  &__heading {
+    max-width: 490px;
+    text-indent: 35%;
+
+    @media (max-width: 1024px) {
+      text-indent: 22%;
+    }
+
+    @media (max-width: 768px) {
+      text-indent: 0;
+    }
+  }
+
+  &__subheading {
+    position: absolute;
+    left: 0;
+    color: rgba(30, 30, 30, 0.6);
+
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19px;
+    max-width: 330px;
+
+    bottom: 10px;
+    left: 42%;
+
+    @media (max-width: 1280px) {
+      right: -230px;
+    }
+
+    @media (max-width: 1024px) {
+      bottom: 0;
+      // text-indent: 22%;
+    }
+
+    @media (max-width: 768px) {
+      right: 0;
+      left: 0;
+      bottom: -50px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.block-heading {
+  // font-size: 72px;
+  color: #1e1e1e;
+  font-size: calc(28px + 42 * (100vw - 320px) / 1580);
+  line-height: 100%;
+  font-weight: 400;
+
+  @media (max-width: 1280px) {
+    // font-size: 58px;
+  }
+}

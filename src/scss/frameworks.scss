@@ -1,0 +1,27 @@
+// @forward "helpers/normalize";
+@forward "helpers/fonts";
+@forward "helpers/color";
+@forward "helpers/text";
+@forward "helpers/global";
+@forward "helpers/mixin";
+@forward "helpers/variebles.scss";
+
+@forward "blocks/root/root.scss";
+
+@forward "blocks/wrapper/wrapper.scss";
+@forward "blocks/components/block-heading.scss";
+
+@forward "blocks/header/header.scss";
+@forward "blocks/hero/hero.scss";
+@forward "blocks/marquee/marquee.scss";
+
+@forward "blocks/about/about.scss";
+@forward "blocks/client/client.scss";
+@forward "blocks/install/install.scss";
+@forward "blocks/products/products.scss";
+@forward "blocks/project/project.scss";
+@forward "blocks/form-section/form-section.scss";
+
+@forward "blocks/footer/footer.scss";
+
+@forward "blocks/burger-menu/burger-menu.scss";

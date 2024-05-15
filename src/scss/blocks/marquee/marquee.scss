@@ -1,0 +1,28 @@
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee__text {
+  display: inline-block;
+  will-change: transform;
+  animation: marquee 40s linear infinite;
+  padding-right: 150px;
+
+  font-size: calc(70px + 120 * (100vw - 320px) / 1580);
+  font-weight: 300;
+  line-height: 205px;
+  letter-spacing: -6px;
+
+  color: rgba(74, 126, 160, 0.3);
+  text-transform: uppercase;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

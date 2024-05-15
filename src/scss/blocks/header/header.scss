@@ -1,0 +1,128 @@
+@use "helpers/color" as *;
+
+.header {
+  position: relative;
+  max-width: 1920px;
+  padding: 0 35px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  @media (max-width: 1024px) {
+    padding: 0 32px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 24px;
+  }
+
+  &__logo {
+    z-index: 1;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu__list {
+  display: flex;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  &-item {
+    list-style-type: none;
+  }
+
+  &-link {
+    font-family: "Raleway";
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #1e1e1e;
+    text-decoration: none;
+    opacity: 0.6;
+
+    @media (max-width: 1024px) {
+      font-size: 90px;
+      line-height: 135px;
+      font-weight: 300;
+      color: #283c4b;
+      opacity: 1;
+    }
+
+    @media (max-width: 560px) {
+      font-size: 40px;
+      line-height: 60px;
+    }
+  }
+
+  &-link:hover {
+    opacity: 1;
+  }
+
+  &-item:not(:last-child) {
+    margin-right: 36px;
+
+    @media (max-width: 1280px) {
+      margin-right: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      margin-right: 0;
+    }
+  }
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  &__number {
+    font-family: "Winston";
+    font-size: 24px;
+    line-height: 36px;
+    color: #1e1e1e;
+    text-decoration: none;
+
+    @media (max-width: 1280px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    @media (max-width: 1024px) {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+  &__consultation-button {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    background-color: transparent;
+    border: 2px solid #283c4b;
+    border-radius: 30px;
+    padding: 13px 36px;
+    margin-left: 30px;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+      margin-top: 20px;
+    }
+  }
+}
