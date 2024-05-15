@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./css/style.css" />
     <script
       src="https://api-maps.yandex.ru/2.1/?apikey=73287b27-1860-4994-acfe-25f7e4fa374a&lang=ru_RU"
@@ -181,22 +186,42 @@
 
         <div class="products">
           <div class="products__inner">
-            <img
-              class="products__image"
-              src="./img/card-1.jpg"
-              alt="картинка"
-            />
+            <div class="products__slider">
+              <div><img src="./img/card-1.jpg" alt="картинка" /></div>
+              <div>
+                <img
+                  class="active-slider"
+                  src="./img/card-2.jpg"
+                  alt="картинка"
+                />
+              </div>
+              <div><img src="./img/card-1.jpg" alt="картинка" /></div>
+              <div><img src="./img/card-3.jpg" alt="картинка" /></div>
+              <div><img src="./img/card-2.jpg" alt="картинка" /></div>
+              <div><img src="./img/card-1.jpg" alt="картинка" /></div>
+              <div><img src="./img/card-3.jpg" alt="картинка" /></div>
+            </div>
 
             <div class="card">
               <h2 class="card__heading">Малые архитектурные формы (МАФ)</h2>
               <ul class="card__list">
-                <li class="card__list-item">Уличные скамейки</li>
-                <li class="card__list-item">Уличные урны</li>
-                <li class="card__list-item">Перголы и навесы</li>
-                <li class="card__list-item">Качели</li>
-                <li class="card__list-item">Уличные столы</li>
-                <li class="card__list-item">Вазоны и цветочницы</li>
-                <li class="card__list-item">Шезлонги</li>
+                <li class="card__list-item" data-slide-index="0">
+                  Уличные скамейки
+                </li>
+                <li class="card__list-item active-slider" data-slide-index="1">
+                  Уличные урны
+                </li>
+                <li class="card__list-item" data-slide-index="2">
+                  Перголы и навесы
+                </li>
+                <li class="card__list-item" data-slide-index="3">Качели</li>
+                <li class="card__list-item" data-slide-index="4">
+                  Уличные столы
+                </li>
+                <li class="card__list-item" data-slide-index="5">
+                  Вазоны и цветочницы
+                </li>
+                <li class="card__list-item" data-slide-index="6">Шезлонги</li>
               </ul>
 
               <div class="card__offer">
@@ -206,20 +231,43 @@
             </div>
           </div>
           <div class="products__inner">
-            <img
-              class="products__image"
-              src="./img/card-2.jpg"
-              alt="картинка"
-            />
+            <div class="products__slider">
+              <div><img src="./img/card-1.jpg" alt="картинка" /></div>
+              <div><img src="./img/card-2.jpg" alt="картинка" /></div>
+              <div><img src="./img/card-1.jpg" alt="картинка" /></div>
+              <div>
+                <img
+                  src="https://images.unsplash.com/photo-1715257742105-b4f626ce3c2d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="картинка"
+                />
+              </div>
 
+              <div>
+                <img
+                  class="active-slider"
+                  src="./img/card-3.jpg"
+                  alt="картинка"
+                />
+              </div>
+            </div>
             <div class="card">
               <h2 class="card__heading">Городские ограждения</h2>
               <ul class="card__list">
-                <li class="card__list-item">Городское ограждение</li>
-                <li class="card__list-item">Ограждение с подсветкой</li>
-                <li class="card__list-item">Тросиковое ограждение</li>
-                <li class="card__list-item">Ограждения из металла и дерева</li>
-                <li class="card__list-item">Ограждение из нержавеющей стали</li>
+                <li class="card__list-item" data-slide-index="0">
+                  Городское ограждение
+                </li>
+                <li class="card__list-item" data-slide-index="1">
+                  Ограждение с подсветкой
+                </li>
+                <li class="card__list-item" data-slide-index="2">
+                  Тросиковое ограждение
+                </li>
+                <li class="card__list-item active-slider" data-slide-index="3">
+                  Ограждения из металла и дерева
+                </li>
+                <li class="card__list-item" data-slide-index="4">
+                  Ограждение из нержавеющей стали
+                </li>
               </ul>
 
               <div class="card__offer">
@@ -506,6 +554,8 @@
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

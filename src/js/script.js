@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         // Настройки иконки метки
         iconLayout: "default#image",
-        iconImageHref: "../img/map-location.svg",
+        iconImageHref: "/img/map-location.svg",
       }
     );
 
@@ -64,8 +64,8 @@ const app = new PIXI.Application({
 document.querySelector(".hero__pixi-container").appendChild(app.view);
 
 // Загрузка текстур
-const imgTexture = PIXI.Texture.from("../img/A-main.png");
-const depthTexture = PIXI.Texture.from("../img/A-main-depth.png");
+const imgTexture = PIXI.Texture.from("/img/A-main.png");
+const depthTexture = PIXI.Texture.from("/img/A-main-depth.png");
 
 imgTexture.baseTexture.on("loaded", () => {
   depthTexture.baseTexture.on("loaded", () => {
@@ -116,3 +116,36 @@ imgTexture.baseTexture.on("loaded", () => {
     });
   });
 });
+
+// document.addEventListener("DOMContentLoaded", function () {
+const listItems = document.querySelectorAll(".card__list-item");
+
+listItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    let slideIndex = parseInt(this.getAttribute("data-slide-index"));
+    let parentBlock = this.closest(".products__inner");
+
+    let lists = parentBlock.querySelectorAll(".card__list");
+    let sliders = parentBlock.querySelectorAll(".products__slider");
+
+    lists.forEach(function (list) {
+      list.querySelectorAll(".card__list-item").forEach(function (listItem) {
+        listItem.classList.remove("active-slider");
+      });
+    });
+
+    sliders.forEach(function (slider) {
+      slider.querySelectorAll("img").forEach(function (img) {
+        img.classList.remove("active-slider");
+      });
+    });
+
+    this.classList.add("active-slider");
+
+    let images = parentBlock.querySelectorAll(".products__slider img");
+
+    // Показываем только выбранное изображение текущего блока
+    images[slideIndex].classList.add("active-slider");
+  });
+});
+// });
