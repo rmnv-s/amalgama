@@ -47,10 +47,6 @@
     font-size: calc(12px + 4 * (100vw - 320px) / 1580);
     color: rgba(30, 30, 30, 0.6);
 
-    @media (max-width: 768px) {
-      margin-top: 400px;
-    }
-
     &-link {
       text-decoration: none;
       color: rgba(30, 30, 30, 0.6);
@@ -137,12 +133,4 @@
 
 .ymaps-2-1-79-map-copyrights-promo {
   display: none;
-}
-
-// .ymaps-2-1-79-copyright__wrap {
-//   display: none;
-// }
-
-#map {
-  // filter: grayscale(100%);
 }

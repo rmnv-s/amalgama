@@ -109,8 +109,15 @@
       column-gap: 30px;
     }
     @media (max-width: 768px) {
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 1fr 1fr;
       column-gap: 10px;
+      row-gap: 10px;
+      align-items: center;
+    }
+
+    @media (max-width: 375px) {
+      grid-template-columns: 50% 40%;
+      column-gap: 30px;
       row-gap: 10px;
       align-items: center;
     }
@@ -126,6 +133,14 @@
     border: 1px dashed #9a9a9a;
     cursor: pointer;
     height: 100%;
+    @media (max-width: 415px) {
+      width: 130px;
+    }
+
+    @media (max-width: 320px) {
+      width: 100px;
+      height: 80%;
+    }
   }
 
   &__logo {
@@ -146,8 +161,12 @@
       height: 45%;
     }
 
-    @media (max-width: 375px) {
-      height: 35%;
+    @media (max-width: 320px) {
+      height: 40%;
     }
+
+    // @media (max-width: 375px) {
+    //   height: 35%;
+    // }
   }
 }

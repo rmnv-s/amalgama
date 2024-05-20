@@ -120,6 +120,10 @@
     @media (max-width: 1024px) {
       font-size: 16px;
     }
+
+    @media (max-width: 425px) {
+      max-width: 250px;
+    }
   }
 
   .card__offer {
@@ -132,6 +136,7 @@
     }
 
     &-download-btn {
+      position: relative;
       text-decoration: none;
       padding: 16px 32px 16px 64px;
 
@@ -142,10 +147,10 @@
       font-weight: 500;
       line-height: 150%;
       color: #283c4b;
-      position: relative;
+      white-space: nowrap;
 
       @media (max-width: 425px) {
-        padding: 12px 28px 12px 60px;
+        padding: 12px 25px 12px 50px;
       }
 
       &::before {
@@ -162,7 +167,7 @@
 
         @media (max-width: 425px) {
           top: 10px;
-          left: 24px;
+          left: 16px;
         }
       }
     }
@@ -203,11 +208,23 @@
   @media (max-width: 768px) {
     position: relative;
   }
+
+  @media (max-width: 425px) {
+    left: 0;
+  }
 }
 
 .active-slider {
   transform: translateX(20px);
   opacity: 1;
+
+  @media (max-width: 425px) {
+    position: relative;
+    left: 25px;
+    transform: translateX(0px);
+    // padding-left: 30px;
+  }
+
   &::before {
     content: "";
     display: block;
@@ -223,7 +240,10 @@
     @media (max-width: 768px) {
       left: -28px;
       top: 1px;
-      padding-right: 20px;
+    }
+
+    @media (max-width: 425px) {
+      left: -25px;
     }
   }
 }
