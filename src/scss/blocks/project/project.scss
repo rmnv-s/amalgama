@@ -3,6 +3,10 @@
 
   &__heading {
     margin-bottom: 80px;
+
+    @media (max-width: 425px) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -106,9 +110,6 @@
 }
 
 .slider__progress {
-  // position: relative;
-  // bottom: 50px;
-  // left: 0;
   display: flex;
   align-items: center;
   gap: 15px;
@@ -145,8 +146,6 @@
 }
 
 .slider__pagination {
-  // outline: 1px solid blue;
-
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 32px;

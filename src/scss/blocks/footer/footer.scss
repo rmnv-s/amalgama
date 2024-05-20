@@ -1,9 +1,10 @@
 .footer {
-  padding: 170px 0 25px 0;
+  padding: 100px 0 25px 0;
 
   @media (max-width: 425px) {
-    padding: 70px 0 25px 0;
+    padding: 25px 0;
   }
+
   &-grid {
     display: grid;
     grid-template-columns: 25% 1fr 1fr;
