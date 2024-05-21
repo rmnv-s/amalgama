@@ -1,11 +1,15 @@
 .client {
   margin-bottom: 170px;
 
+  @media (max-width: 425px) {
+    margin-bottom: 100px;
+  }
+
   &__inner {
     margin-left: 27%;
 
     @media (max-width: 768px) {
-      margin-bottom: 70px;
+      // margin-bottom: 70px;
       margin-left: 0%;
     }
   }
@@ -43,6 +47,10 @@
 
     @media (max-width: 768px) {
       text-indent: 0;
+    }
+
+    @media (max-width: 425px) {
+      margin-bottom: 75px;
     }
   }
 
@@ -84,46 +92,17 @@
 
   &__partner {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 305px);
+    grid-template-columns: repeat(auto-fill, 295px);
 
     row-gap: 30px;
     column-gap: 50px;
-    align-items: end;
-    margin-bottom: 145px;
+    align-items: center;
+    // margin-bottom: 145px;
 
-    @media (max-width: 1440px) {
-      grid-template-columns: repeat(auto-fill, 260px);
-      column-gap: 30px;
-    }
-    @media (max-width: 1215px) {
-      grid-template-columns: repeat(auto-fill, 340px);
-      column-gap: 50px;
-    }
-
-    @media (max-width: 1080px) {
-      grid-template-columns: repeat(auto-fill, 280px);
-      column-gap: 50px;
-    }
-
-    @media (max-width: 920px) {
-      grid-template-columns: repeat(auto-fill, 260px);
-      column-gap: 30px;
-    }
-    @media (max-width: 768px) {
-      margin-bottom: 45px;
-      grid-template-columns: 1fr 1fr;
+    @media (max-width: 425px) {
+      grid-template-columns: repeat(2, 1fr);
       column-gap: 10px;
       row-gap: 10px;
-      align-items: center;
-    }
-
-    @media (max-width: 375px) {
-      grid-template-columns: 50% 40%;
-      column-gap: 30px;
-      row-gap: 10px;
-      align-items: center;
-
-      margin-bottom: 15px;
     }
   }
 
@@ -137,40 +116,15 @@
     border: 1px dashed #9a9a9a;
     cursor: pointer;
     height: 100%;
-    @media (max-width: 415px) {
-      width: 130px;
-    }
 
-    @media (max-width: 320px) {
-      width: 100px;
-      height: 80%;
+    @media (max-width: 425px) {
+      width: 100%;
     }
   }
 
   &__logo {
-    @media (max-width: 1440px) {
-      // width: 80%;
-      height: 65%;
+    @media (max-width: 425px) {
+      width: 100%;
     }
-
-    @media (max-width: 1215px) {
-      height: 75%;
-    }
-
-    @media (max-width: 920px) {
-      height: 65%;
-    }
-
-    @media (max-width: 615px) {
-      height: 45%;
-    }
-
-    @media (max-width: 320px) {
-      height: 40%;
-    }
-
-    // @media (max-width: 375px) {
-    //   height: 35%;
-    // }
   }
 }

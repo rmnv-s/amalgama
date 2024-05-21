@@ -1,13 +1,13 @@
 .burger-menu {
   position: absolute;
-  top: 12px;
+  top: 4px;
   right: 50%;
   cursor: pointer;
 
   display: none;
   z-index: 9999;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1060px) {
     display: block;
   }
 
@@ -41,24 +41,29 @@
 .open {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
-  position: absolute;
-  justify-content: center;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  width: 100%;
-  height: 120vh;
-  background-color: #ffffff;
+  // text-align: center;
+  // align-items: center;
+  // position: absolute;
+  // justify-content: center;
+  // left: 50%;
+  // transform: translate(-50%, -20%);
+  // width: 100%;
+  // height: 120vh;
+  // background-color: #ffffff;
+  // background-color: lightgreen;
   z-index: 1;
+  align-items: center;
+  // min-height: 100vh;
+  width: 100%;
+  // min-height: 100%;
 }
 
 .open-contact {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  bottom: 5vh;
-  top: 80vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  // display: flex;
+  // flex-direction: column;
+  // position: absolute;
+  // bottom: 5vh;
+  // top: 80vh;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
 }

@@ -31,6 +31,8 @@ const root = document.querySelector(".root");
 const burgerMenuButton = document.querySelector(".burger-menu");
 const menu = document.querySelector(".menu");
 const menuList = document.querySelector(".menu__list");
+const headerNavInner = document.querySelector(".header__nav-inner");
+const headerNav = document.querySelector(".header__nav");
 const contactInfo = document.querySelector(".contact-info");
 const menuLinks = document.querySelectorAll(".menu__list-link");
 //
@@ -54,38 +56,43 @@ const menuLinks = document.querySelectorAll(".menu__list-link");
 // });
 
 burgerMenuButton.addEventListener("click", () => {
+  headerNavInner.classList.toggle("open");
   menuList.classList.toggle("open");
+
+  headerNav.classList.toggle("open-nav");
+
   root.classList.toggle("no-scroll");
   burgerMenuButton.classList.toggle("active");
   if (window.innerWidth <= 768) {
-    contactInfo.classList.toggle("open-contact");
+    // contactInfo.classList.toggle("open-contact");
+    headerNav.classList.remove("open-nav");
+    contactInfo.classList.toggle("open");
+    headerNav.classList.toggle("open-menu");
   }
 });
 
 menuLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
-    // Prevent default link action
     event.preventDefault();
+    headerNavInner.classList.toggle("open");
 
-    // Get the target anchor
     const targetId = link.getAttribute("href");
     const targetElement = document.querySelector(targetId);
 
-    // Close the menu
     menuList.classList.remove("open");
+    headerNavInner.classList.remove("open");
+    headerNav.classList.remove("open-menu");
     root.classList.remove("no-scroll");
-    contactInfo.classList.remove("open-contact");
+    contactInfo.classList.remove("open");
     burgerMenuButton.classList.remove("active");
 
-    // Delay scrolling to allow menu to close properly
     setTimeout(() => {
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: "smooth" });
       }
 
-      // Update the URL hash without jumping
       history.pushState(null, null, targetId);
-    }, 300); // Adjust delay as needed
+    }, 300);
   });
 });
 
