@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 118px 0 170px 0;
+  padding: 118px 0 170px 0;
 
   &__heading {
     font-size: calc(150px + 170 * (100vw - 320px) / 1580);
